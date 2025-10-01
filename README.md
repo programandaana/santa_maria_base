@@ -14,7 +14,7 @@ Baseado no tutorial de <a href='[https://leafletjs.com/examples/layers-control/e
 - Maptiler Topo
 - Satellite Google
 - Map Google
-- Carta do Exército 1:25.000
+- Cartas do Exército Brasileiro 1:25.000
 - ArcGIS
 - ArcGIS 2
 - ArcGIS Satellite
@@ -24,5 +24,5 @@ Baseado no tutorial de <a href='[https://leafletjs.com/examples/layers-control/e
 - Aerolevantamento 2013 - Geo Santa Maria
 - Aerolevantamento 2019 - Geo Santa Maria
 
-## Acesse aqui: https://programandaana.github.io/santa_maria_bas/
+## Acesse aqui: https://programandaana.github.io/santa_maria_base/
 I don't own the original project - Modified
