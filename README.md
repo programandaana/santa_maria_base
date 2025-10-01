@@ -18,11 +18,13 @@ Baseado no tutorial de <a href='[https://leafletjs.com/examples/layers-control/e
 - ArcGIS
 - ArcGIS 2
 - ArcGIS Satellite
-- Aerolevantamento 1966 - Geo Santa Maria
-- Pluvial Santa Maria 1979 - Geo Santa Maria
-- Aerolevantamento 1982 - Geo Santa Maria
-- Aerolevantamento 2013 - Geo Santa Maria
-- Aerolevantamento 2019 - Geo Santa Maria
+- Aerolevantamento 1966 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
+- Pluvial Santa Maria 1979 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
+- Aerolevantamento 1982 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
+- Aerolevantamento 2013 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
+- Aerolevantamento 2019 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
 
 ## Acesse aqui: https://programandaana.github.io/santa_maria_base/
+
+Layers availability is the responsibility of the corporations
 I don't own the original project - Modified
