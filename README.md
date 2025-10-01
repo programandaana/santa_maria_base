@@ -14,7 +14,7 @@ Baseado no tutorial de <a href='[https://leafletjs.com/examples/layers-control/e
 - Maptiler Topo
 - Satellite Google
 - Map Google
-- Cartas do Exército Brasileiro 1:25.000
+- Cartas do Exército Brasileiro 1:25.000, Fonte: https://bdgex.eb.mil.br/bdgexapp
 - ArcGIS
 - ArcGIS 2
 - ArcGIS Satellite
