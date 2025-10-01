@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Layers Control Tutorial - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+const municipio = L.layerGroup();
+const sMar = L.marker([-29.685117, -53.803387]).bindPopup('Prefeitura Municipal de Santa Maria - RS').addTo(municipio);
+
+const osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+});
+
+const cartol = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+});
+
+const cartod = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+});
+
+const dataviz = L.tileLayer('https://api.maptiler.com/maps/dataviz/256/{z}/{x}/{y}.png?key=2VjXlq0fSgazCj5rCu6D', {
+	maxZoom: 18,
+});
+
+const streets = L.tileLayer('https://api.maptiler.com/maps/streets-v2/256/{z}/{x}/{y}.png?key=2VjXlq0fSgazCj5rCu6D', {
+	maxZoom: 18,
+});
+
+const topo = L.tileLayer('https://api.maptiler.com/maps/topo-v2/256/{z}/{x}/{y}.png?key=2VjXlq0fSgazCj5rCu6D', {
+	maxZoom: 18,
+});
+
+const satelliteGoogle = L.tileLayer('http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {
+	maxZoom: 18,
+});
+const mapGoogle = L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
+	maxZoom: 18,
+});
+
+const mapArcGIS = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 18,
+});
+const mapArcGIS2 = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 18,
+});
+const mapArcGIS3 = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 18,
+});
+
+const map = L.map('map', {
+	center: [-29.685117, -53.803387],
+	zoom: 18,
+	layers: [osmHOT, municipio]
+});
+
+const wmsLayer = L.tileLayer.wms('https://bdgex.eb.mil.br/mapcache?', {
+		layers: 'ctm25',
+		crs: L.CRS.EPSG4326,
+});
+
+const geomaisAero1966 = L.tileLayer.wms('http://geocadastro.santamaria.rs.gov.br/geoserver/gm_santa_maria/wms?', {
+		layers: 'ortofoto_5',
+		crs: L.CRS.EPSG31982,
+});
+
+const geomaisAero2013 = L.tileLayer.wms('http://geocadastro.santamaria.rs.gov.br/geoserver/gm_santa_maria/wms?', {
+		layers: 'ortofoto_1',
+		crs: L.CRS.EPSG31982,
+});
+
+const geomaisAero2019 = L.tileLayer.wms('http://geocadastro.santamaria.rs.gov.br/geoserver/gm_santa_maria/wms?', {
+		layers: 'ortofoto_2',
+		crs: L.CRS.EPSG31982,
+});
+
+const geomaisAero1982 = L.tileLayer.wms('http://geocadastro.santamaria.rs.gov.br/geoserver/gm_santa_maria/wms?', {
+		layers: 'ortofoto_6',
+		crs: L.CRS.EPSG31982,
+});
+
+const geomaisPluvial1979 = L.tileLayer.wms('http://geocadastro.santamaria.rs.gov.br/geoserver/gm_santa_maria/wms?', {
+		layers: 'ortofoto_7',
+		crs: L.CRS.EPSG31982,
+});
+
+const baseLayers = {
+	'OpenStreetMap.HOT': osmHOT,
+	'Carto Light': cartol,
+	'Carto Dark': cartod,
+	'Maptiler Dataviz': dataviz,
+	'Maptiler Streets': streets,
+	'Maptiler Topo': topo,
+	'Satellite Google': satelliteGoogle,
+	'Map Google': mapGoogle,
+	'Carta do Exército 1:25.000':wmsLayer,
+	'ArcGIS':mapArcGIS,
+	'ArcGIS 2':mapArcGIS2,
+	'ArcGIS Satellite':mapArcGIS3,
+	'Aerolevantamento 1966 - Geo Santa Maria': geomaisAero1966,
+	'Pluvial Santa Maria 1979 - Geo Santa Maria' : geomaisPluvial1979,
+	'Aerolevantamento 1982 - Geo Santa Maria': geomaisAero1982,
+	'Aerolevantamento 2013 - Geo Santa Maria': geomaisAero2013,
+	'Aerolevantamento 2019 - Geo Santa Maria': geomaisAero2019,
+	
+};
+
+const overlays = {
+	'Município de Santa Maria': municipio
+};
+
+const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>
