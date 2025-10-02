@@ -1,6 +1,6 @@
 # Exibição de Camadas Base de Serviços de Informação Geográfica para o Município de Santa Maria (RS)
 
-Este projeto é só pra exibição de camadas com informações de diversas empresas e órgãos públicos sobre o Município de Santa Maria, para consulta.
+Este projeto é só pra exibição de camadas raster (tiles) com informações de diversas empresas e órgãos públicos sobre o Município de Santa Maria, para consulta.
 
 Futuramente este objeto servirá como base para SIG, apenas para auxílio foi disponibilizado.
 Baseado no tutorial de <a href='https://leafletjs.com/examples/layers-control/example.html'> Volodymyr Agafonkin </a>, criador da biblioteca Javascript Leaflet.js
