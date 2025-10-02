@@ -3,7 +3,7 @@
 Este projeto é só pra exibição de camadas com informações de diversas empresas e órgãos públicos do Município de Santa Maria, para consulta.
 
 Futuramente este objeto servirá como base para SIG, apenas para auxílio foi disponibilizado.
-Baseado no tutorial de <a href='[https://leafletjs.com/examples/layers-control/example.html'> Volodymyr Agafonkin </a>, criador da biblioteca Javascript Leaflet.js
+Baseado no tutorial de <a href='https://leafletjs.com/examples/layers-control/example.html'> Volodymyr Agafonkin </a>, criador da biblioteca Javascript Leaflet.js
 
 ## Camadas implementadas:
 - OpenStreetMap.HOT
