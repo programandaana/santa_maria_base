@@ -20,7 +20,7 @@ Baseado no tutorial de <a href='https://leafletjs.com/examples/layers-control/ex
 - ArcGIS Satellite
 - Aerolevantamento 1966 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
 - Pluvial Santa Maria 1979 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
-- Aerolevantamento 1982 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
+- Aerolevantamento 1979 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
 - Aerolevantamento 2013 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
 - Aerolevantamento 2019 - Geo Santa Maria, Fonte: https://geocadastro.santamaria.rs.gov.br
 
